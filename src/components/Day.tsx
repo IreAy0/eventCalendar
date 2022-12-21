@@ -40,7 +40,7 @@ function Day({ day, rowIdx }: DayProp) {
     : "";
 
   }
-  console.log('selectedEvent,  ', selectedEvent,  )
+  // console.log('selectedEvent,  ', selectedEvent,  )
   return (
     <div className="border border-gray-200 flex flex-col">
       <header className="flex flex-col items-center">

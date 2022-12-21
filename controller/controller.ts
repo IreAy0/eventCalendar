@@ -63,7 +63,6 @@ export async function allEvents(req: NextApiRequest, res: NextApiResponse){
         });
       });
     res.status(200).json(document);
-    // console.log(querySnapshot.docs,'docs')
   } catch (error) {
     console.log(error, 'err');
     res.status(404).json({ error: "route not found"})

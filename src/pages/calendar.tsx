@@ -26,7 +26,8 @@ function Main() {
     fetchData();
   }, [dispatchCalEvent]);
 
-  console.log('showEventModal', showEventModal)
+  // console.log('showEventModal', showEventModal)
+  
   return (
     <div className='content'>
        {showEventModal && <EventModal />}

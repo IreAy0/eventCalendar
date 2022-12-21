@@ -6,7 +6,7 @@ function Events({savedEvents}: any) {
   const { selectedEvent, setShowEventModal,  dispatchCalEvent, setSelectedEvent  } =
   useContext(GlobalContext);
 
-  console.log('savedEvents', savedEvents, selectedEvent)
+  // console.log('savedEvents', savedEvents, selectedEvent)
   return (
     <Fragment>
       <p className="text-gray-500 font-bold mt-10">Events</p>

@@ -11,7 +11,7 @@ export const createNewEvent = async(formData: any) =>{
           body: JSON.stringify(formData)
       }
       
-      const response = await fetch(`${BASE_URL}api/events`, Options)
+      const response = await fetch(`/api/events`, Options)
       const json = await response.json()
 
       return json;
@@ -21,7 +21,6 @@ export const createNewEvent = async(formData: any) =>{
 }
 
 export async function updateEventApi(formData: any){
-  console.log('formData', formData)
   try{
       const Options = {
           method : 'PUT',
@@ -32,9 +31,7 @@ export async function updateEventApi(formData: any){
           // headers : { 'Content-Type': "application/json, text/plain, */*"},
           body: JSON.stringify(formData)
       }
-      console.log('Options', Options)
-      const response = await fetch(`${BASE_URL}api/events/${formData.id}`, Options)
-      console.log('response', response)
+      const response = await fetch(`/api/events/${formData.id}`, Options)
       const json = await response.json()
       return json;
   }catch(error){
@@ -44,7 +41,6 @@ export async function updateEventApi(formData: any){
 }
 
 export async function deleteEventApi(formData: any){
-  console.log('formData', formData)
   try{
       const Options = {
           method : 'DELETE',
@@ -55,9 +51,7 @@ export async function deleteEventApi(formData: any){
           // headers : { 'Content-Type': "application/json, text/plain, */*"},
           body: JSON.stringify(formData)
       }
-      console.log('Options', Options)
-      const response = await fetch(`${BASE_URL}api/events/${formData.id}`, Options)
-      console.log('response', response)
+      const response = await fetch(`/api/events/${formData.id}`, Options)
       const json = await response.json()
       return json;
   }catch(error){
@@ -68,7 +62,7 @@ export async function deleteEventApi(formData: any){
 
 export async function getEventsData() {
   try {
-    const snapshot = await fetch(`${BASE_URL}api/events`);
+    const snapshot = await fetch(`/api/events`);
     const json = await snapshot.json()
     if (json) {
       return json;
