@@ -1,0 +1,55 @@
+.content p {
+  @apply my-6;
+}
+
+.content ul {
+  @apply my-6;
+}
+
+html {
+  @apply bg-slate-200 ;
+}
+html body {
+  @apply  antialiased overflow-x-hidden font-roboto text-sm text-slate-800;
+}
+
+*,
+::before,
+::after {
+    @apply border-white/5;
+}
+@media screen and (max-width: 640px) {
+html  body {
+    @apply px-3;  }
+  
+}
+@media screen and (max-width: 768px) { 
+ html body {
+    @apply px-8;
+    }
+ }
+
+
+/* html {
+  @apply bg-primary md:bg-slate-200;
+  &.dark {
+      @apply bg-darkmode-800;
+      body {
+          @apply text-slate-300;
+          *,
+          ::before,
+          ::after {
+              @apply border-white/5;
+          }
+      }
+  }
+  body {
+      @apply antialiased overflow-x-hidden font-roboto text-sm text-slate-800;
+      @include media-breakpoint-down(md) {
+          @apply px-8;
+      }
+      @include media-breakpoint-down(sm) {
+          @apply px-3;
+      }
+  }
+} */
