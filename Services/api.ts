@@ -1,15 +1,6 @@
 // import database, { auth } from "./firebase";
 
-const BASE_URL = "http://localhost:8080/"
-
-
-export const getUser = async (eventId: any) => {
-  const response = await fetch(`${BASE_URL}api/events/${eventId}`);
-  const json = await response.json()
-
-  if(json) return json;
-  return {}
-}
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL_LOCAL
 
 
 export const createNewEvent = async(formData: any) =>{
