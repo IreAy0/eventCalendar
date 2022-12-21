@@ -44,7 +44,6 @@ function EventModal() {
     }
   }
 
-  console.log('selectedEvent', selectedEvent)
   return (
     <div className="h-screen w-full  left-0 flex justify-center items-center absolute">
       <form className="bg-white rounded-lg shadow-2xl w-2/5 z-50">
