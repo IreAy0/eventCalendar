@@ -3,7 +3,7 @@ import GlobalContext from "../context/GlobalContext";
 
 function Events({savedEvents}: any) {
   // const {savedEvents } = useContext(GlobalContext);
-  const { selectedEvent, setShowEventModal,  dispatchCalEvent, setSelectedEvent  } =
+  const { setShowEventModal,  dispatchCalEvent, setSelectedEvent  } =
   useContext(GlobalContext);
 
   // console.log('savedEvents', savedEvents, selectedEvent)
