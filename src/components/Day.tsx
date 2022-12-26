@@ -30,11 +30,6 @@ function Day({ day, rowIdx }: DayProp) {
       : "";
   }
 
-  function getAllId(evnt: any) {
-    return savedEvents.filter(event => event.id === evnt.id) ? "bg-blue-300 text-white "
-      : "";
-  }
-
   return (
     <div className="border border-gray-200 flex flex-col">
       <header className="flex flex-col items-center">
