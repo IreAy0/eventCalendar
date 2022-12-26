@@ -57,7 +57,7 @@ function Day({ day, rowIdx }: DayProp) {
           <div
             key={index}
             onClick={() => setSelectedEvent(event)}
-            className={` p1 mr-3 text-sm rounded mb-1 truncate ${getAllId(event)}`}
+            className={` p-1 mr-3 text-sm rounded mb-1 truncate ${getAllId(event)}`}
           >
             {event.title}
 
