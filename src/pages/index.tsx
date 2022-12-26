@@ -1,4 +1,3 @@
-// import { FullCalendarDraggable, Lucide } from '@/base-components';
 import AddEvent from '@/components/AddEvent';
 import CalenderNav from '@/components/CalendarNav';
 import Events from '@/components/Events';
@@ -10,7 +9,7 @@ import { getEventsData } from '../../Services/api';
 import { getMonth } from '../../Services/utils';
 
 function Index() {
-  const { setShowEventModal, showEventModal,  monthIndex,  dispatchCalEvent, savedEvents } = useContext(GlobalContext);
+  const { setShowEventModal, showEventModal, monthIndex, dispatchCalEvent, savedEvents } = useContext(GlobalContext);
   const [currentMonth, setCurrentMonth] = useState(getMonth());
 
   useEffect(() => {
@@ -22,7 +21,7 @@ function Index() {
       try {
         const result = await getEventsData();
         dispatchCalEvent({ type: "fetch", payload: result });
-      } catch (error) {}
+      } catch (error) { }
     };
 
     fetchData();
@@ -30,7 +29,7 @@ function Index() {
 
   return (
     <div className='content'>
-       {showEventModal && <EventModal />}
+      {showEventModal && <EventModal />}
       <div className="intro-y mt-8 flex flex-col items-center sm:flex-row">
         <h2 className="mr-auto text-lg font-medium">Event Calendar</h2>
       </div>
@@ -38,17 +37,17 @@ function Index() {
         {/* BEGIN: Calendar Side Menu */}
         <div className="col-span-12 xl:col-span-4 2xl:col-span-3">
           <div className="box intro-y p-5">
-           <AddEvent />
-            <Events savedEvents={savedEvents}/>
+            <AddEvent />
+            <Events savedEvents={savedEvents} />
           </div>
         </div>
         {/* END: Calendar Side Menu */}
         {/* BEGIN: Calendar Content */}
         <div className="col-span-12 xl:col-span-8 2xl:col-span-9">
-          
+
           <div className="box ">
-          <CalenderNav />
-            <Month month={currentMonth}/>
+            <CalenderNav />
+            <Month month={currentMonth} />
           </div>
         </div>
         {/* END: Calendar Content */}

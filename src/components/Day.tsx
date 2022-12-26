@@ -22,7 +22,6 @@ function Day({ day, rowIdx }: DayProp) {
     const filtered = savedEvents.filter(event => event.start == day.format("YYYY-MM-DD"))
     const endDates = savedEvents.filter(event => event.end == day.format("YYYY-MM-DD"))
     setDayEvents([...filtered, ...endDates]);
-
   }, [savedEvents, day]);
 
   function getCurrentDayClass() {
@@ -32,7 +31,7 @@ function Day({ day, rowIdx }: DayProp) {
   }
 
   function getAllId(evnt: any) {
-    return savedEvents.filter(event => event.id === evnt.id) ? "bg-blue-600 text-white "
+    return savedEvents.filter(event => event.id === evnt.id) ? "bg-blue-300 text-white "
       : "";
   }
 
@@ -46,24 +45,24 @@ function Day({ day, rowIdx }: DayProp) {
           {day.format("DD")}
         </p>
       </header>
-      <div
-        className="flex-1 cursor-pointer"
-        onClick={() => {
-          setDaySelected(day);
-          setShowEventModal(true);
-        }}
+      <ul
+        className="flex-1 cursor-pointer list-disc"
       >
         {dayEvents.map((event, index) => (
-          <div
+          <li
             key={index}
-            onClick={() => setSelectedEvent(event)}
-            className={` p-1 mr-3 text-sm rounded mb-1 truncate ${getAllId(event)}`}
-          >
-            {event.title}
+            onClick={() =>{
+               setSelectedEvent(event)
+               setShowEventModal(true);
 
-          </div>
+              }}
+            className={` p-0.5 mr-3 text-xs hover:bg-gray-200 rounded mb-1 truncate font-semibold `}
+          >
+             {event.title}
+
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 }
