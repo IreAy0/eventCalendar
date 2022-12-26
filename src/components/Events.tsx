@@ -5,14 +5,12 @@ function Events({savedEvents}: any) {
   // const {savedEvents } = useContext(GlobalContext);
   const { setShowEventModal,  dispatchCalEvent, setSelectedEvent  } =
   useContext(GlobalContext);
-
-  // console.log('savedEvents', savedEvents, selectedEvent)
   return (
     <Fragment>
-      <p className="text-gray-500 font-bold mt-10">Events</p>
-      <div className="mt-6 mb-5 border-y border-slate-200/60 py-3 ">
+      <h1 className="mr-10 text-xl text-gray-500 font-bold">Events</h1>
+      <ul className="mt-6 mb-5 border-y border-slate-200/60 py-3 ">
         {savedEvents.map((event: any) => (
-          <div className="relative" key={event.id}>
+          <li datatest-id="eventList" className="relative" key={event.id}>
                 <div className="event -mx-3 flex cursor-pointer items-center rounded-md p-3 transition duration-300 ease-in-out hover:bg-slate-100 ">
                   <div className="mr-3 h-2 w-2 rounded-full bg-pending"></div>
                   <div className="pr-10">
@@ -56,12 +54,12 @@ function Events({savedEvents}: any) {
                 </button>
                 </div>
                 
-              </div>
+              </li>
 
         ))}
               
               
-            </div>
+            </ul>
     </Fragment>
   );
 }

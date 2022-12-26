@@ -17,6 +17,7 @@ interface SelectedEvent {
 interface Values{
   monthIndex: number;
   // daySelected,
+  setMonthIndex:(e: number) => void,
   setDaySelected : (e: string) => void,
   showEventModal: boolean;
   setShowEventModal: (e: boolean) => void,
@@ -31,7 +32,6 @@ interface Values{
 
 function ContextWrapper(props : any) {
   const [monthIndex, setMonthIndex] = useState(dayjs().month());
-  const [smallCalendarMonth, setSmallCalendarMonth] = useState(null);
   const [daySelected, setDaySelected] = useState<any>(dayjs());
   const [showEventModal, setShowEventModal] = useState(false);
   const [selectedEvent, setSelectedEvent] = useState<SelectedEvent | any>({});
@@ -62,12 +62,6 @@ function ContextWrapper(props : any) {
 
 
   useEffect(() => {
-    if (smallCalendarMonth !== null) {
-      setMonthIndex(smallCalendarMonth);
-    }
-  }, [smallCalendarMonth]);
-
-  useEffect(() => {
     if (!showEventModal) {
       setSelectedEvent(null);
     }
@@ -77,6 +71,7 @@ function ContextWrapper(props : any) {
 
   const value: Values = {
     monthIndex,
+    setMonthIndex,
     setDaySelected,
     showEventModal,
     setShowEventModal,
