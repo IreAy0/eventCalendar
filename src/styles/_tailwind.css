@@ -34,17 +34,3 @@
    }
   
 }
-
-
-/* @include media-breakpoint-down(md) {
-  border-radius: 30px;
-  @apply px-4 max-w-full pt-0 mt-10;
-}
-&:before {
-  content: "";
-  @apply w-full h-px block;
-}
-&.content--top-nav {
-  border-radius: 35px 35px 0 0;
-  @apply pt-0 mt-5;
-} */

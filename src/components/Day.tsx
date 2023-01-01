@@ -31,7 +31,7 @@ function Day({ day, rowIdx }: DayProp) {
   }
 
   return (
-    <div className="border border-gray-200 flex flex-col">
+    <div data-testid="day-element" className="border day border-gray-200 flex flex-col">
       <header className="flex flex-col items-center">
         {rowIdx === 0 && (
           <p className="text-sm mt-1">{day.format("ddd").toUpperCase()}</p>

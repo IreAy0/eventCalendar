@@ -42,7 +42,7 @@ function CalenderNav() {
 
         </span>
       </button>
-      <h2 className="ml-4 text-xl text-gray-500 font-bold">
+      <h2  data-testid="current-month" className="ml-4 text-xl text-gray-500 font-bold">
         {dayjs(new Date(dayjs().year(), monthIndex)).format("MMMM YYYY")}
       </h2>
 

@@ -1,23 +1,36 @@
-# eventCalendar
+# Event Calendar App
 
-### Requirements
+This is a web application for creating and managing events on a calendar. It is built using Next.js and React, and utilizes Firebase Firestore as the database to store event data.
+
+## Built With
+
+- [Next.js](https://nextjs.org/) - The web framework used
+- [React](https://reactjs.org/) - The JavaScript library for building user interfaces
+- [Firebase Firestore](https://firebase.google.com/products/firestore) - The database used to store event data
+
+## Requirements
 
 - Node.js 14+ and npm
 
-### Getting started
+## Getting Started
 
-Run the following command on your local environment:
+To get started with this project, follow these steps:
 
-```shell
-git clone https://github.com/IreAy0/eventCalendar.git
-cd my-project-name
-npm install
-```
+1. Clone the repository to your local machine: `git clone https://github.com/IreAy0/eventCalendar.git`
+2. Navigate to the root directory of the project: `cd eventCalendar`
+3. install the required dependencies: run `npm install` 
+4. Run `npm run dev` to start the development server
+5. Open your browser and navigate to http://localhost:8080.
 
-Then, you can run locally in development mode with live reload:
+## Testing
 
-```shell
-npm run dev
- ```
+To run the tests, use the following command:
 
-Open http://localhost:8080 with your favorite browser to see your project.
+`npm test` 
+
+### Available Scripts
+
+- `npm run dev`: Starts the development server
+- `npm run build`: Builds the app for production
+- `npm start`: Starts the production server
+

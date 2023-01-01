@@ -1,4 +1,4 @@
-import { cleanup, fireEvent, getByTestId, render, screen } from '@testing-library/react';
+import {getByTestId, render, screen } from '@testing-library/react';
 import user from '@testing-library/user-event'
 import AddEvent from '@/components/AddEvent';
 import EventModal from '@/components/Modal';

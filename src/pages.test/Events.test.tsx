@@ -1,4 +1,4 @@
-import { cleanup, fireEvent, getByTestId, render, screen } from '@testing-library/react';
+import {render, screen } from '@testing-library/react';
 import Events from '@/components/Events';
 
 
@@ -28,6 +28,8 @@ describe ('Show all Events', () => {
     expect(eventLists).toHaveLength(eventLists.length)
     
   });
+
+
 
 })
     
