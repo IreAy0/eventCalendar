@@ -43,7 +43,7 @@ function EventModal() {
 
   return (
     <div  className="h-screen w-full  left-0 flex justify-center items-center fixed z-50">
-      <form data-testid="modal-element" className="bg-white rounded-lg shadow-2xl w-2/5 z-50">
+      <form data-testid="modal-element" className="bg-white rounded-lg shadow-2xl z-50">
         <header className="bg-gray-100 px-4 py-2 flex justify-end items-center">
          
           <div className="flex space-x-3">

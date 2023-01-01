@@ -21,8 +21,11 @@ function CalenderNav() {
   }
 
   return (
-    <header className="px-4 py-2 flex items-center">
-      <h1 className="mr-10 text-xl text-gray-500 font-bold">Calender</h1>
+    <header className="px-4 py-2 flex items-center flex-wrap lg:flex-nowrap">
+      {/* <h1 className="mr-10 text-xl text-gray-500 font-bold">Calender</h1> */}
+      <h2  data-testid="current-month" className="mr-4 text-xl text-gray-500 font-bold">
+        {dayjs(new Date(dayjs().year(), monthIndex)).format("MMMM YYYY")}
+      </h2>
       <button onClick={handleReset} className="border border-slate-300 hover:bg-gray-200 rounded py-2 px-4 mr-5">
         Today
       </button>
@@ -42,9 +45,7 @@ function CalenderNav() {
 
         </span>
       </button>
-      <h2  data-testid="current-month" className="ml-4 text-xl text-gray-500 font-bold">
-        {dayjs(new Date(dayjs().year(), monthIndex)).format("MMMM YYYY")}
-      </h2>
+      
 
     </header>
   );
