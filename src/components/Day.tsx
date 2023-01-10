@@ -6,6 +6,7 @@ interface DayProp {
   day: any;
   rowIdx: number;
 }
+
 function Day({ day, rowIdx }: DayProp) {
   const [dayEvents, setDayEvents] = useState<any[]>([]);
 
@@ -19,9 +20,9 @@ function Day({ day, rowIdx }: DayProp) {
 
 
   useEffect(() => {
-    const filtered = savedEvents.filter(event => event.start == day.format("YYYY-MM-DD"))
+    const startDate = savedEvents.filter(event => event.start == day.format("YYYY-MM-DD"))
     const endDates = savedEvents.filter(event => event.end == day.format("YYYY-MM-DD"))
-    setDayEvents([...filtered, ...endDates]);
+    setDayEvents([...startDate, ...endDates]);
   }, [savedEvents, day]);
 
   function getCurrentDayClass() {
@@ -51,7 +52,7 @@ function Day({ day, rowIdx }: DayProp) {
                setShowEventModal(true);
 
               }}
-            className={` p-0.5 mr-3 text-xs hover:bg-gray-200 rounded mb-1 truncate font-semibold `}
+            className={`p-0.5 mr-3 text-xs hover:bg-gray-200 rounded mb-1 truncate font-semibold `}
           >
              {event.title}
 

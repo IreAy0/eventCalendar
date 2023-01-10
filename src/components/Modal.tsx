@@ -21,6 +21,8 @@ function EventModal() {
 
   async function handleSubmit(e: { preventDefault: () => void; }) {
     e.preventDefault();
+    let startDate = new Date(start)
+    let endDate = new Date(end)
     if (!title) {
       setError("The title is required.");
     } else if (!description) {
@@ -33,6 +35,9 @@ function EventModal() {
       setError("The end date is required.");
     } 
 
+    else if (startDate > endDate) {
+      setError("Start date cannot be after end date.");
+    } 
     else  {
       setError(null);
       const event = {
