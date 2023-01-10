@@ -2,7 +2,7 @@
   "name": "event-calendar",
   "version": "1.0.0",
   "scripts": {
-    "dev": "PORT=8080 next dev",
+    "dev": " next dev",
     "build": "next build",
     "start": "next start",
     "build-stats": "cross-env ANALYZE=true npm run build",

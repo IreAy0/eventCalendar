@@ -23,7 +23,17 @@ function EventModal() {
     e.preventDefault();
     if (!title) {
       setError("The title is required.");
-    } else  {
+    } else if (!description) {
+      setError("The description is required.");
+    } 
+   else if (!start) {
+      setError("The start date is required.");
+    } 
+   else if (!end) {
+      setError("The end date is required.");
+    } 
+
+    else  {
       setError(null);
       const event = {
         title,
