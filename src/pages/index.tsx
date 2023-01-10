@@ -4,6 +4,7 @@ import Events from '@/components/Events';
 import EventModal from '@/components/Modal';
 import Month from '@/components/Month';
 import GlobalContext from '@/context/GlobalContext';
+import { Meta } from '@/layouts/Meta';
 import { useContext, useEffect, useState } from 'react';
 import { getEventsData } from '../../Services/api';
 import { getMonth } from '../../Services/utils';
@@ -28,6 +29,8 @@ function Index() {
   }, [dispatchCalEvent]);
 
   return (
+  <>
+    <Meta title='Event Calendar' description="A simple event calendar" />
     <div className='content'>
       {showEventModal && <EventModal />}
       <div className="intro-y mt-8 flex flex-col items-center sm:flex-row">
@@ -53,6 +56,7 @@ function Index() {
         {/* END: Calendar Content */}
       </div>
     </div>
+    </>
   );
 }
 
