@@ -79,7 +79,7 @@ function EventModal() {
                 <input
                 
                 name="title"
-                placeholder=""
+                placeholder="Title"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
                   type="text"
@@ -91,10 +91,10 @@ function EventModal() {
                     p-3
                     rounded-md
                     bg-gray-100
-                    border-transparent
+                    border-gray-500
+                    border
                     focus:border-gray-500 focus:bg-white focus:ring-0
                   "
-                  
                 />
               </label>
               <label className="block">
@@ -102,9 +102,8 @@ function EventModal() {
                 <input
                  value={description}
                   type="text"
-                  name="description"
+                  name="Description"
                   onChange={(e) => setDescription(e.target.value)}
-
                   className="
                     mt-1
                     block
@@ -112,10 +111,11 @@ function EventModal() {
                     w-full
                     rounded-md
                     bg-gray-100
-                    border-transparent
+                    border
+                    border-gray-500
                     focus:border-gray-500 focus:bg-white focus:ring-0
                   "
-                  placeholder="john@example.com"
+                  placeholder="descriptions"
                 />
               </label>
               <label className="block">
@@ -133,7 +133,8 @@ function EventModal() {
                     w-full
                     rounded-md
                     bg-gray-100
-                    border-transparent
+                    border
+                    border-gray-500
                     focus:border-gray-500 focus:bg-white focus:ring-0
                   "
                 />
@@ -152,7 +153,8 @@ function EventModal() {
                     p-3
                     rounded-md
                     bg-gray-100
-                    border-transparent
+                    border
+                    border-gray-500
                     focus:border-gray-500 focus:bg-white focus:ring-0
                   "
                 />
